@@ -1,0 +1,230 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+
+<link rel="import" href="bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="bower_components/iron-icons/iron-icons.html">
+
+<link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
+
+<link rel="import" href="bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
+<link rel="import" href="bower_components/app-layout/app-header/app-header.html">
+<link rel="import" href="bower_components/app-layout/app-header-layout/app-header-layout.html">
+<link rel="import" href="bower_components/app-layout/app-toolbar/app-toolbar.html">
+
+<link rel="import" href="bower_components/app-layout/demo/sample-content.html">
+
+<dom-module id="cqs-app">
+
+    <template>
+
+        <style>
+
+            a {
+                text-decoration: none;
+                font-size: inherit;
+                color: inherit;
+            }
+
+            .toolbar {
+                @apply(--layout-horizontal);
+                @apply(--layout-end-justified);
+                background-color: rgba(255, 255, 255, 0.95);
+            }
+
+            .tabs {
+                height: 100%;
+                @apply(--layout-horizontal);
+            }
+
+            .tabs > a {
+                @apply(--layout-vertical);
+                @apply(--layout-center-center);
+                margin: 12px 16px 12px;
+                border-bottom: 1px solid #222;
+            }
+
+            /*header {*/
+                /*@apply(--layout-vertical);*/
+                /*@apply(--layout-center-center);*/
+                /*height: calc(100vh - 64px);*/
+                /*padding: 0 16px;*/
+                /*background-image: url('img/bg.png');*/
+                /*backgrond-repeat: no-repeat;*/
+                /*background-size: cover;*/
+                /*color: white;*/
+                /*text-align: center;*/
+            /*}*/
+
+            .header{
+                /*@apply(--layout-vertical);*/
+                /*@apply(--layout-center-center);*/
+                background: url('img/bg.png') repeat-x;
+                height: 700px;
+                width: 100%;
+                background-size: cover;
+            }
+
+            .mask{
+                background: rgba(0,86,106,0.75);
+                z-index: 99;
+                position: relative;
+                height: 100%;
+            }
+
+            .text{
+                position: absolute;
+                text-align: left;
+                width: 500px;
+                margin: 200px 400px;
+            }
+
+            .text > h2{
+                font-size: 84px;
+                color: #fae25b;
+                font-weight: normal;
+            }
+
+            .text > h5{
+                font-size: 35px;
+                color: #fff;
+                margin: 0 !important;
+            }
+
+            .text > p{
+                font-size: 30px;
+                color: #fff;
+                word-spacing: 6px;
+                margin: 0 !important;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+
+            header > h2 {
+                font-size: 56px;
+                font-weight: 300;
+                margin: 0;
+            }
+
+            header > p {
+                font-size: 32px;
+            }
+
+            section {
+                padding: 88px 16px;
+            }
+
+            .container {
+                @apply(--layout-horizontal);
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .container > * {
+                @apply(--layout-flex);
+            }
+
+            .container img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+
+            .container h3 {
+                font-size: 32px;
+                font-weight: 300;
+                margin: 24px 0;
+            }
+
+            .container p {
+                line-height: 1.5;
+            }
+
+            @media (max-width: 600px) {
+                .container {
+                    @apply(--layout-vertical);
+                }
+            }
+
+            span{
+                color: #00566a;
+            }
+
+        </style>
+
+        <app-header-layout>
+
+            <app-header reveals effects="waterfall">
+
+                <app-toolbar class="toolbar">
+                    <div class="tabs">
+                        <a href="#about">关于常青树</a>
+                        <a href="#parent">父母端</a>
+                        <a href="#child">子女端</a>
+                    </div>
+                </app-toolbar>
+
+            </app-header>
+
+            <header class="header">
+                <div class="mask">
+                    <div class="text">
+                        <h5 class="css57a88c6ce161cc">互联网 + 爱</h5>
+                        <h2 class="css57a88c6ce161cc">常青树</h2>
+                        <p>连 接 40 / 50 后 与 70 / 80 后</p>
+                    </div>
+                </div>
+            </header>
+            <section id="about">
+                <div class="container">
+                    <div>
+                        <img src="img/logo.png">
+                    </div>
+                    <div>
+                        <h3>关于常青树</h3>
+                        <p><span>“常青树”</span>是专为父母与子女设计的关爱互动平台，由面向40／50后父母端与面向70/80后的子女端组成</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="parent">
+                <div class="container">
+                    <div>
+                        <img src="img/parent.png">
+                    </div>
+                    <div>
+                        <h3>父母端</h3>
+                        <p><span>父母端包括“常青树”安卓APP以及智能健康设备。</span>让父母可以与亲友
+                            进行互动交流，使他们不孤单;让父母观看各种娱乐视频，丰富他们的生
+                            活；让父母随时测量自己的健康数据，帮助他们获得更高的生活质量。
+                            常青树，让父母在岁月深处，发现更多精彩</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="child">
+                <div class="container">
+                    <div>
+                        <img src="img/child.png">
+                    </div>
+                    <div>
+                        <h3>子女端</h3>
+                        <p><span>子女端是名为“家有常青树”的微信公众号。</span>让子女可以和父母保持联
+                            络互动，实时查看父母的地理位置信息，随时了解父母的健康数据。常
+                            青树，帮助子女更好地关爱父母</p>
+                    </div>
+                </div>
+            </section>
+
+        </app-header-layout>
+
+    </template>
+
+    <script>
+
+        Polymer({
+
+            is: 'cqs-app'
+
+        });
+
+    </script>
+
+</dom-module>
