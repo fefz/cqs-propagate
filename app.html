@@ -18,6 +18,10 @@
 
         <style>
 
+            P{
+                font-family: Microsoft YaHei ,Arial, Helvetica, sans-serif;
+            }
+
             a {
                 text-decoration: none;
                 font-size: inherit;
@@ -58,7 +62,7 @@
                 /*@apply(--layout-vertical);*/
                 /*@apply(--layout-center-center);*/
                 background: url('img/bg.png') repeat-x;
-                height: 700px;
+                height: 800px;
                 width: 100%;
                 background-size: cover;
             }
@@ -94,7 +98,7 @@
                 color: #fff;
                 word-spacing: 6px;
                 margin: 0 !important;
-                font-family: Arial, Helvetica, sans-serif;
+                font-family: Microsoft YaHei ,Arial, Helvetica, sans-serif;
             }
 
 
@@ -114,8 +118,9 @@
 
             .container {
                 @apply(--layout-horizontal);
-                max-width: 800px;
+                max-width: 1000px;
                 margin: 0 auto;
+                align-items: center
             }
 
             .container > * {
@@ -131,19 +136,52 @@
                 font-size: 32px;
                 font-weight: 300;
                 margin: 24px 0;
+                text-align: center;
             }
 
             .container p {
-                line-height: 1.5;
+                line-height: 2.0;
             }
 
-            @media (max-width: 600px) {
+            @media screen and (max-width: 600px) {
                 .container {
                     @apply(--layout-vertical);
                 }
+
+                .header{
+                    background: url('img/bg.png') repeat-x;
+                    height: 200px;
+                    width: 100%;
+                    background-size: cover;
+                }
+
+                .text{
+                    position: absolute;
+                    text-align: center;
+                    width: 100%;
+                    margin: 0 !important;
+                    padding-top: 20px;
+                }
+
+                .text > h2{
+                    font-size: 40px;
+                    color: #fae25b;
+                    font-weight: normal;
+                }
+
+                .text > h5{
+                    font-size: 20px;
+                    color: #fff;
+                }
+
+                .text > p{
+                    font-size: 14px;
+                    color: #fff;
+                }
+
             }
 
-            span{
+            strong{
                 color: #00566a;
             }
 
@@ -179,7 +217,7 @@
                     </div>
                     <div>
                         <h3>关于常青树</h3>
-                        <p><span>“常青树”</span>是专为父母与子女设计的关爱互动平台，由面向40／50后父母端与面向70/80后的子女端组成</p>
+                        <p><strong>“常青树”</strong>是专为父母与子女设计的关爱互动平台，由面向40／50后父母端与面向70/80后的子女端组成</p>
                     </div>
                 </div>
             </section>
@@ -191,7 +229,7 @@
                     </div>
                     <div>
                         <h3>父母端</h3>
-                        <p><span>父母端包括“常青树”安卓APP以及智能健康设备。</span>让父母可以与亲友
+                        <p><strong>父母端包括“常青树”安卓APP以及智能健康设备。</strong>让父母可以与亲友
                             进行互动交流，使他们不孤单;让父母观看各种娱乐视频，丰富他们的生
                             活；让父母随时测量自己的健康数据，帮助他们获得更高的生活质量。
                             常青树，让父母在岁月深处，发现更多精彩</p>
@@ -206,7 +244,7 @@
                     </div>
                     <div>
                         <h3>子女端</h3>
-                        <p><span>子女端是名为“家有常青树”的微信公众号。</span>让子女可以和父母保持联
+                        <p><strong>子女端是名为“家有常青树”的微信公众号。</strong>让子女可以和父母保持联
                             络互动，实时查看父母的地理位置信息，随时了解父母的健康数据。常
                             青树，帮助子女更好地关爱父母</p>
                     </div>
